@@ -1,24 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zVR-9J-7sj">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="98u-Nx-3l9">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="zVR-9J-7sj" customClass="ViewController" customModule="ticTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dMG-fx-Z9A">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CKB-Ec-lFS">
+                                <rect key="frame" x="19.666666666666657" y="261.66666666666663" width="353.66666666666674" height="353.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="c7i-bJ-k4V">
+                                        <rect key="frame" x="0.0" y="0.0" width="353.66666666666669" height="114.66666666666667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjf-mZ-3zQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="xJb-p4-HG4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mz-Y8-PjQ">
+                                                <rect key="frame" x="119.66666666666669" y="0.0" width="114.33333333333331" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="xmV-zh-avl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLz-sP-9rm">
+                                                <rect key="frame" x="239.00000000000003" y="0.0" width="114.66666666666666" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="PuQ-ep-Ghq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-yW-1lR">
+                                        <rect key="frame" x="0.0" y="119.66666666666663" width="353.66666666666669" height="114.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRP-fe-MLK">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="114.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="WLf-U1-84G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-29-8t3">
+                                                <rect key="frame" x="119.66666666666669" y="0.0" width="114.33333333333331" height="114.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="e1u-0W-7ap"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFi-sY-Wjz">
+                                                <rect key="frame" x="239.00000000000003" y="0.0" width="114.66666666666666" height="114.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="VQW-Hg-wmq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1Xg-zr-T5m">
+                                        <rect key="frame" x="0.0" y="238.99999999999997" width="353.66666666666669" height="114.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPp-ib-f0U">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="hdn-FO-0Cv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHD-nA-1WS">
+                                                <rect key="frame" x="119.66666666666669" y="0.0" width="114.33333333333331" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="m0B-aS-YAk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-ln-F9L">
+                                                <rect key="frame" x="239.00000000000003" y="0.0" width="114.66666666666666" height="114.66666666666667"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="gridPress:" destination="zVR-9J-7sj" eventType="touchUpInside" id="WRh-Mc-A3U"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CKB-Ec-lFS" secondAttribute="height" multiplier="1:1" id="prr-a4-4e9"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7F-0z-g6J">
+                                <rect key="frame" x="88" y="708" width="219" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Restart game" subtitle="">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartGame:" destination="zVR-9J-7sj" eventType="touchUpInside" id="Fib-da-BXV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1x-kl-iVP">
+                                <rect key="frame" x="167" y="59.000000000000007" width="59" height="26.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epN-jS-BAd">
+                                <rect key="frame" x="118" y="93" width="157" height="73"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cct-jR-Gz0"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="epN-jS-BAd" firstAttribute="top" secondItem="j1x-kl-iVP" secondAttribute="bottom" constant="7.6699999999999999" id="4LQ-9c-rog"/>
+                            <constraint firstItem="CKB-Ec-lFS" firstAttribute="top" secondItem="epN-jS-BAd" secondAttribute="bottom" constant="95.670000000000002" id="AMo-tr-kES"/>
+                            <constraint firstItem="Cct-jR-Gz0" firstAttribute="trailing" secondItem="epN-jS-BAd" secondAttribute="trailing" constant="118" id="EaZ-cU-ahn"/>
+                            <constraint firstItem="Cct-jR-Gz0" firstAttribute="trailing" secondItem="j1x-kl-iVP" secondAttribute="trailing" constant="167" id="QO1-m4-sS5"/>
+                            <constraint firstItem="CKB-Ec-lFS" firstAttribute="centerY" secondItem="Cct-jR-Gz0" secondAttribute="centerY" id="Sni-Aj-FNx"/>
+                            <constraint firstItem="j1x-kl-iVP" firstAttribute="top" secondItem="Cct-jR-Gz0" secondAttribute="top" id="UAd-Ot-ClM"/>
+                            <constraint firstItem="j1x-kl-iVP" firstAttribute="leading" secondItem="Cct-jR-Gz0" secondAttribute="leading" constant="167" id="bKa-qz-yDs"/>
+                            <constraint firstItem="epN-jS-BAd" firstAttribute="leading" secondItem="Cct-jR-Gz0" secondAttribute="leading" constant="118" id="kKh-gy-ZsA"/>
+                            <constraint firstItem="CKB-Ec-lFS" firstAttribute="width" secondItem="dMG-fx-Z9A" secondAttribute="width" multiplier="0.9" id="nyj-2h-SnA"/>
+                            <constraint firstItem="CKB-Ec-lFS" firstAttribute="centerX" secondItem="Cct-jR-Gz0" secondAttribute="centerX" id="qJ2-xb-Dy0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activePlayer" destination="epN-jS-BAd" id="fLt-s1-JSs"/>
+                        <outletCollection property="gameBtnCollection" destination="xjf-mZ-3zQ" collectionClass="NSMutableArray" id="ZDP-2X-mds"/>
+                        <outletCollection property="gameBtnCollection" destination="2mz-Y8-PjQ" collectionClass="NSMutableArray" id="Hsv-Po-Hrb"/>
+                        <outletCollection property="gameBtnCollection" destination="fLz-sP-9rm" collectionClass="NSMutableArray" id="a9j-OJ-uhT"/>
+                        <outletCollection property="gameBtnCollection" destination="gRP-fe-MLK" collectionClass="NSMutableArray" id="FWM-oN-aPD"/>
+                        <outletCollection property="gameBtnCollection" destination="dgM-29-8t3" collectionClass="NSMutableArray" id="jmA-90-IEQ"/>
+                        <outletCollection property="gameBtnCollection" destination="eFi-sY-Wjz" collectionClass="NSMutableArray" id="DZW-Lz-aRo"/>
+                        <outletCollection property="gameBtnCollection" destination="YPp-ib-f0U" collectionClass="NSMutableArray" id="OZ5-sn-Rqg"/>
+                        <outletCollection property="gameBtnCollection" destination="WHD-nA-1WS" collectionClass="NSMutableArray" id="7nz-5U-zn2"/>
+                        <outletCollection property="gameBtnCollection" destination="Fbr-ln-F9L" collectionClass="NSMutableArray" id="lH2-qe-pTN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBG-Bb-JrA" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="867.93893129770993" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
